@@ -1,0 +1,39 @@
+================================================================================
+DIGIT'PILOT - GUIDE DE MISE A JOUR A DISTANCE (SANS CODE SOURCE EXPOSE)
+================================================================================
+
+COMMENT CA MARCHE ?
+------------------
+1. Vos clients ont Digit'Pilot 2.1 installe sur leur ordinateur.
+2. A chaque lancement (ou en cliquant sur "Verifier la version" dans l'onglet Mises a jour),
+   Digit'Pilot lit silencieusement le fichier "version.json" sur Internet.
+3. Si le numero dans version.json est superieur (ex: 2.2.0 > 2.1.0) :
+   - Un badge dore apparait : "v2.2 Disponible".
+   - Le client clique sur "Mettre a jour".
+   - Digit'Pilot telecharge le nouveau "DigitPilot.exe", remplace l'ancien et redemarre !
+
+SECURITE & CONFIDENTIALITE DU CODE :
+------------------------------------
+- Il n'y a AUCUN code source (.cs, .xaml, etc.) sur ce canal !
+- Seul le fichier binaire compile et scelle (DigitPilot.exe) est heberge.
+- C'est exactement le meme principe que pour n'importe quel logiciel professionnel
+  (ex: Google Chrome, Discord, Steam qui distribuent des .exe sans donner leur code source).
+
+OU POSER CES DEUX FICHIERS (version.json et DigitPilot.exe) ?
+-------------------------------------------------------------
+Sur votre compte GitHub "baffert", creez un depot PUBLIC nomme :
+"DigitPilot-Releases" (ou utilisez le depot de votre choix).
+
+Dans ce depot :
+1. Glissez-deposez simplement les deux fichiers de ce dossier :
+   - version.json
+   - DigitPilot.exe
+2. C'est tout ! Zéro configuration complexe de serveur, zéro abonnement payant.
+
+COMMENT ENVOYER UNE NOUVELLE MISE A JOUR (ex: la 2.2) ?
+-------------------------------------------------------
+Le jour ou vous voulez publier la 2.2 a vos clients :
+1. Vous remplacez DigitPilot.exe par le nouveau binaire de la 2.2.
+2. Vous changez "2.1.0" par "2.2.0" dans version.json.
+3. Instantanement, tous vos clients recoivent la notification de mise a jour !
+================================================================================
